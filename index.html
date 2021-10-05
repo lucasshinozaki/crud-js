@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML CRUD em JS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <table>
+        <tr>
+            <td>
+                <form onsubmit="event.preventDefault();registrar();" autocomplete="off">
+                    <div>
+                        <label>Nome Completo*</label><label class="validation-error hide" id="ValidandoNome">This field is required.</label>
+                        <input type="text" name="nome" id="nome">
+                    </div>
+                    <div>
+                        <label>Salario</label>
+                        <input type="text" name="salario" id="salario">
+                    </div>
+                    <div>
+                        <label>Cidade</label>
+                        <input type="text" name="cidade" id="cidade">
+                    </div>
+                    <div  class="form-action-buttons">
+                        <input type="submit" value="Enviar">
+                    </div>
+                </form>
+            </td>
+            <td>
+                <table class="list" id="employeeList">
+                    <thead>
+                        <tr>
+                            <th>Nome Completo</th>
+                            <th>Salario</th>
+                            <th>Cidade</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+    </table>
+    <script src="script.js"></script>
+</body>
+</html>
